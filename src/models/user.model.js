@@ -43,7 +43,7 @@ const userSchema = new Schema(
        refereshToken : {
         type : String
        }
-    }
+    },
     {
         timestamps: true
     }
