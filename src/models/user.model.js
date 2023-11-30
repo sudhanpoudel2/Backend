@@ -22,7 +22,7 @@ const userSchema = new Schema(
         lowercase : true,
         trim : true,
        },
-       fulname : {
+       fullName : {
         type : String,
         required : true,
         trim : true,
@@ -63,6 +63,29 @@ const userSchema = new Schema(
 // userSchema.methods.isPasswordCorrect = async function (password){
 //     return await bcrypt.compare(password.this.password)
 // }
+
+userSchema.method.generateAccessToken = function(){
+   return jwt.sign({
+    _id : thid._id,
+    email : this.email,
+    username : this.username,
+    fullName : this.fullName
+   },
+   process.env.ACCESS_TOKEN_SECRET,
+   {
+    expiresIn : process.env.ACCESS_TOKEN_EXPIRY
+   })
+}
+
+userSchema.method.generateRefreshToken = function(){
+    return jwt.sign({
+        _id : thid._id,
+       },
+       process.env.REFRESH_TOKEN_SECRET,
+       {
+        expiresIn : process.env.REFRESH_TOKEN_EXPIRY
+       })
+}
 
 
 
