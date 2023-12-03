@@ -1,0 +1,7 @@
+// what is http headers ?
+// (metadata) -> key:value sent along with request and response
+
+// uses of header 
+// -caching
+// -authentication
+// -manage state
