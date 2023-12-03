@@ -5,3 +5,8 @@
 // -caching
 // -authentication
 // -manage state
+
+// request header = from client
+// response header = from ServiceWorkerRegistration
+// representation header = encoding/compression
+// pay load header = data  
