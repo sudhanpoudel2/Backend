@@ -10,3 +10,16 @@
 // response header = from ServiceWorkerRegistration
 // representation header = encoding/compression
 // pay load header = data  
+
+// HTTP method
+// -basic set of operation that can be used  to interact with ServiceWorkerRegistration
+
+//     GET: retrieve a resource
+//     HEAD: no message body (response header only)
+//     OPTIONS: what operation are available
+//     TRACE: lookback test ( get some data)
+//     DELETE: remove a resource
+//     PUT: replace a resource
+//     POST: interact with resource(mostly add)
+//     PATCH: change part of a resource
+
