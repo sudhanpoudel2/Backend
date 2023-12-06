@@ -6,6 +6,7 @@ const app = express()
 
 app.use(cors({
     origin : process.env.CORS_ORIGIN
+    
 }))
 
 app.use(express.json({limit  : "16kb"}))
@@ -15,10 +16,10 @@ app.use(cookieParser)
 
 //import router
 
-import userrouters from "../src/routes/user.routers.js"
+import userRouter from "../src/routes/user.routers.js"
 
 //router Decleration
 
-app.use("/user",userrouters)    //connect with router so , localhost::2000/user/register
+app.use("/api/v1/user",userRouter)    //connect with router so , localhost::2000/user/register
 
 export { app }
