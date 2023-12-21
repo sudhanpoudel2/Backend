@@ -20,3 +20,5 @@ class ApiError extends Errpr{
 
     }
 }
+
+export{ApiError}
