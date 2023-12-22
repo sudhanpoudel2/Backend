@@ -1,5 +1,5 @@
 import mongoose ,{Schema} from "mongoose";
-import { Jwt } from "jsonwebtoken";
+import jwt from "jsonwebtoken"
 
 // import bcrypt form "bcrypt";  //for encrypt password
 
@@ -39,7 +39,7 @@ const userSchema = new Schema(
        },
        watchHistory : [
         {
-            type : Schema.Type.ObjectId,
+            type : Schema.Types.ObjectId,
             ref :"Video"
         }
        ],
@@ -91,4 +91,4 @@ userSchema.method.generateRefreshToken = function(){
 
 
 
-export const User = model.Schema("User",userSchema);
+export const User = mongoose.model("User",userSchema);
