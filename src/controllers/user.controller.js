@@ -16,7 +16,8 @@ const registerUser = asyncHandler(async(req,res)=>{
     // remove password and refresh token field from response 
     // check from user creation 
     // return res
-    res.send("Hello I am tester ");
+    console.log("hello I am pawan");
+   res.send("Hello I am tester ");
 
     // const {fullname ,email ,username , password}= req.body
     // console.log("email",email);
@@ -72,6 +73,9 @@ const registerUser = asyncHandler(async(req,res)=>{
     return res.status(201).json(
         new ApiResponse(200, createdUser , "User register successfully")
     )
+    
 })
+
+
 
 export {registerUser}
