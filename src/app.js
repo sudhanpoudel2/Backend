@@ -20,7 +20,7 @@ import userRouter from "../src/routes/user.routers.js"
 
 //router Decleration
 
-app.use("/api/v1/users",userRouter)    //connect with router so , localhost::2000/user/register
+app.use("/api/v1/user",userRouter)    //connect with router so , localhost::2000/user/register
 
 
 export { app }
